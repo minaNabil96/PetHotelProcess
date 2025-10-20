@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.22.0"
+  },
+  "type": "default",
+  "id": "BookingForm",
+  "components": [
+    {
+      "type": "textfield",
+      "id": "Field_ClientName",
+      "key": "clientName",
+      "label": "Имя клиента",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "textfield",
+      "id": "Field_ClientContact",
+      "key": "clientContact",
+      "label": "Контактный телефон",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "textfield",
+      "id": "Field_PetName",
+      "key": "petName",
+      "label": "Кличка питомца",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "select",
+      "id": "Field_PetType",
+      "key": "petType",
+      "label": "Вид питомца",
+      "values": [
+        {
+          "label": "Собака",
+          "value": "Собака"
+        },
+        {
+          "label": "Кошка",
+          "value": "Кошка"
+        }
+      ],
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "datepicker",
+      "id": "Field_CheckIn",
+      "key": "checkInDate",
+      "label": "Дата заезда"
+    },
+    {
+      "type": "datepicker",
+      "id": "Field_CheckOut",
+      "key": "checkOutDate",
+      "label": "Дата выезда"
+    }
+  ]
+}

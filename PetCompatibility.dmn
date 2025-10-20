@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.22.0" modeler:executionPlatform="Camunda 8" modeler:executionPlatformVersion="8.5.0">
+  <decision id="pet_compatibility_check" name="Оценка совместимости для групповых игр">
+    <decisionTable id="DecisionTable_1" hitPolicy="UNIQUE">
+      <input id="Input_1" label="Вид питомца">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>petType</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1" label="Размер">
+        <inputExpression id="LiteralExpression_1" typeRef="string">
+          <text>petSize</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_2" label="Особенности характера">
+        <inputExpression id="LiteralExpression_2" typeRef="string">
+          <text>petTemperament</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Уровень совместимости" name="уровеньСовместимости" typeRef="string" />
+      <output id="OutputClause_1" label="Рекомендация" name="рекомендация" typeRef="string" />
+      <rule id="Rule_1">
+        <inputEntry id="UnaryTests_1">
+          <text>"Собака"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_2">
+          <text>"Маленький"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_3">
+          <text>"Дружелюбный"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_3">
+          <text>"Полная"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_4">
+          <text>"Можно в общую группу"</text>
+        </outputEntry>
+      </rule>
+      <rule id="Rule_2">
+        <inputEntry id="UnaryTests_4">
+          <text>"Собака"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_6">
+          <text>"Агрессивный"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_5">
+          <text>"Несовместим"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_6">
+          <text>"Только индивидуальные игры"</text>
+        </outputEntry>
+      </rule>
+      <rule id="Rule_3">
+        <inputEntry id="UnaryTests_7">
+          <text>"Кошка"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_9">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_7">
+          <text>"Несовместим"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_8">
+          <text>"Не допускать к собакам"</text>
+        </outputEntry>
+      </rule>
+      <rule id="Rule_4">
+        <inputEntry id="UnaryTests_10">
+          <text>"Собака"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11">
+          <text>"Большой"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12">
+          <text>"Спокойный"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_9">
+          <text>"Ограниченная"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10">
+          <text>"Группа под наблюдением"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
